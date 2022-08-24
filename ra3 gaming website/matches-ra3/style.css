@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
+    scroll-padding-top: 2rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;;
+}
+body {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background: black;
+    background-image: url(rm251-mind-01-a.jpg);
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat, repeat;
+    background-position: center;
+    background-size: 500vh;
+}
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    background: black;
+    padding: 5px 75%;
+    transition: .3s;
+    }
+    .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .navbar a {
+        color: white;
+        text-decoration: none;
+        font-size: 1rem;
+        padding: 10px 30px;
+        font-weight: 500;
+        display: flex;
+        padding: 10px 20px;
+        position: relative;
+        font-size: 20px;
+        overflow: hidden;
+        transition: 0.3s;
+        border-radius: 5px 35px;
+        list-style: none;
+    }
+    .navbar a:hover {
+        background: #3813b7;
+        color: white;
+        box-shadow: 0 0 15px #3813b7,
+        0 0 45px #3813b7, 0 0 45px #3813b7;
+        transition-delay: 0.0s;
+    }
+    header ul li a:hover, .active{
+        background-color: #3813b7;
+        color: white;
+    }
+    .menu-btn {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80px;
+        height: 80px;
+        transition: all .5s ease-in-out;
+    }
+    .menu-button {
+        width: 50px;
+        height: 6px;
+        background: black ;
+        border-radius: 5px;
+        transition: all .5s ease-in-out;
+        background: black;
+    }
+    .menu-button::before,
+    .menu-button::after {
+        content: '';
+        position: absolute;
+        width: 50px;
+        height: 6px;
+        background: black;
+        border-radius: 5px;
+        transition: all .5s ease-in-out;
+    }
+    .menu-button::before {
+        transform: translateY(-16px);
+    }
+    .menu-button::after {
+        transform: translateY(16px);
+    }
+    .menu-btn.open .menu-button {
+        transform: translateX(-50px);
+        background: transparent;
+        box-shadow: none;
+    }
+    .menu-btn.open .menu-button::before {
+        transform: rotate(45deg) translate(35px, -35px);
+    }
+    .menu-btn.open .menu-button::after {
+        transform: rotate(-45deg) translate(35px, 35px);
+    }

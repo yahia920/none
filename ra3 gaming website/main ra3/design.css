@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+/*html*/
+body {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background: black;
+    background-image: url(rm251-mind-01-a.jpg);
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat, repeat;
+    background-position: center;
+    background-size: 500vh;
+}
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: black;
+    padding: 1px 7%;
+    transition: .3s;
+}
+/*navbar*/
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 10px 30px;
+    font-weight: 500;
+    display: flex;
+    padding: 10px 20px;
+    position: relative;
+    font-size: 20px;
+    overflow: hidden;
+    transition: 0.3s;
+    border-radius: 5px 35px;
+}
+.navbar a:hover {
+    background: #3813b7;
+    color: white;
+    box-shadow: 0 0 15px #3813b7,
+    0 0 45px #3813b7, 0 0 45px #3813b7;
+    transition-delay: 0.0s;
+}
+header ul li a:hover, .active{
+    background-color: #3813b7;
+    color: white;
+}
+.menu-btn {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    transition: all .5s ease-in-out;
+}
+.menu-button {
+    width: 50px;
+    height: 6px;
+    background: black ;
+    border-radius: 5px;
+    transition: all .5s ease-in-out;
+    background: black;
+}
+.menu-button::before,
+.menu-button::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 6px;
+    background: black;
+    border-radius: 5px;
+    transition: all .5s ease-in-out;
+}
+.menu-button::before {
+    transform: translateY(-16px);
+}
+.menu-button::after {
+    transform: translateY(16px);
+}
+.menu-btn.open .menu-button {
+    transform: translateX(-50px);
+    background: transparent;
+    box-shadow: none;
+}
+.menu-btn.open .menu-button::before {
+    transform: rotate(45deg) translate(35px, -35px);
+}
+.menu-btn.open .menu-button::after {
+    transform: rotate(-45deg) translate(35px, 35px);
+}
+img {
+    height: 6.5rem;
+    padding: 0 500px 0 0;
+}
+/*home*/
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.home-text h1{
+    display: block; 
+    color: #3813b7;
+    font-size: 150px;
+    text-align: center;
+    padding: 300px 0 0 0;
+}
+.home-text h3 {
+    display: block;
+    text-align: center;
+    color: #fff;
+    font-size: 25px;
+}
+span {
+    color: #3813b7;
+    font-size: 25px;
+}
+.button {
+    display: flex;
+    margin: 150px 0 0 0;
+    border: 5px solid #3813b7;
+    line-height: 42px;
+    padding: 25px 100px;
+}
+.btn {
+    display: flex;
+    color: #fff;
+    font-size: 25px;
+    text-align: center;
+}
+.button:hover {
+    background: #3813b7;
+    color: black;
+    box-shadow: 0 0 15px #3813b7,
+    0 0 45px #3813b7, 0 0 45px #3813b7;
+    transition-delay: 0.0s;
+    transition: 0.2s;
+    cursor: pointer;
+}
